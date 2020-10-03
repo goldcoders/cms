@@ -1,24 +1,40 @@
 # CMS
 
-## Install Dependency on The Site Project
+## Requirements
 
+- nodejs & npm (latest)
+- yarn (latest)
+
+## Installation
+
+### Add Dependencies
 - yarn add netlify-cms netlify-cms-proxy-server npm-run-all parcel-bundler typescript dotenv
-- modify package.json
+
+### Update Package.json
 
 ```
-"browserslist": [
-    "last 1 chrome versions"
-],
 "scripts":{
-"cms-dev": "parcel src/index.html",
-"cms-build": "parcel build src/index.html",
+"cms-dev": "parcel cms/src/index.html -d exampleSite/static/admin",
+"cms-build": "parcel build cms/src/index.html -d exampleSite/static/admin",
 "cms-proxy": "netlify-cms-proxy-server",
-"cms": "run-p cms-dev cms-proxy"
+"start": "run-p cms-proxy cms-dev dev"
 }
 ```
 
-- cp .env.example .env
-- yarn cms
+### Merge ENV variables to your existing one
+
+```
+LOCAL_BACKEND=true
+SHOW_PREVIEW_LINKS=true
+MEDIA_FOLDER=exampleSite/static/images
+SITE_URL=http://localhost:1234
+DISPLAY_URL=http://localhost:1234
+LOGO_URL=http://localhost:1234/images/logo.svg
+PUBLIC_FOLDER=/images
+```
+### RUN CMS
+
+- yarn start
 
 ## Todo
 - Add Additional Shortcodes
