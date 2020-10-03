@@ -1,16 +1,19 @@
 # CMS
 
 ## Requirements
-
+- git
 - nodejs & npm (latest)
 - yarn (latest)
 
-## Installation
+### Installation
+- go to thriftshop app folder
+- git clone https://github.com/goldcoders/cms
 
 ### Add Dependencies
-- yarn add netlify-cms netlify-cms-proxy-server npm-run-all parcel-bundler typescript dotenv
 
-### Update Package.json
+- yarn add netlify-cms netlify-cms-proxy-server npm-run-all parcel-bundler typescript
+
+### Update Package.json on thriftshop app
 
 ```
 "scripts":{
