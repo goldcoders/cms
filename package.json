@@ -1,0 +1,24 @@
+{
+  "name": "cms",
+  "version": "1.0.0",
+  "repository": "git@github.com:goldcoders/cms.git",
+  "author": "Goldcoders <goldcoders@protonmail.com>",
+  "license": "MIT",
+  "browserslist": [
+    "last 1 chrome versions"
+  ],
+  "scripts": {
+    "cms-dev": "parcel src/index.html",
+    "cms-build": "parcel build src/index.html",
+    "cms-proxy": "netlify-cms-proxy-server",
+    "cms": "run-p cms-dev cms-proxy"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "netlify-cms": "^2.10.61",
+    "netlify-cms-proxy-server": "^1.3.6",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.0.3"
+  }
+}
