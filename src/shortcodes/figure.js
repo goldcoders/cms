@@ -11,14 +11,14 @@ CMS.registerEditorComponent({
         {
             name: "src",
             label: "Figure SRC",
-            widget: "string"
+            widget: "image"
         },
     ],
-    pattern: /{{< figure src="([a-zA-Z0-9-_ ]+)" title="([a-zA-Z0-9-_ ]+)" >}}/,
+    pattern: /{{< figure src="([\s\S]*)" title="([a-zA-Z0-9-_ ]+)" >}}/,
     fromBlock: function(match) {
         return {
-            title: match[1],
-            src: match[2],
+            title: match[2],
+            src: match[1],
         };
     },
     toBlock: function(obj) {
