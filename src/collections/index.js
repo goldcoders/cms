@@ -282,6 +282,59 @@ let collections = [
                 ]
             },
             {
+                "file": "exampleSite/data/home/cart.yaml",
+                "label": "Cart Settings",
+                "name": "data_cart",
+                "fields": [
+                    {
+                        "label": "Title",
+                        "name": "title",
+                        "widget": "string",
+                        "required": true,
+                        "default": "Shopping Cart"
+                    },
+                    {
+                        "label": "Tax",
+                        "name": "tax_rate",
+                        "widget": "number",
+                        "min": 0,
+                        "max": 1,
+                        "required": true,
+                        "value_type": "float",
+                        "step": 0.1,
+                        "default": 0.1
+                    },
+                    {
+                        "label": "Shipping Fee",
+                        "name": "shipping_fee",
+                        "widget": "number",
+                        "required": true,
+                        "min": 0
+                    },
+                    {
+                        "label": "Empty Cart Image",
+                        "name": "empty_cart_img",
+                        "widget": "image",
+                        "required": false
+                    },
+                    {
+                        "label": "Empty Cart Error Message",
+                        "name": "empty_cart_error_msg",
+                        "widget": "string",
+                        "required": true,
+                        "default": "Whoops"
+                    },
+                    {
+                        "label": "Empty Cart Label",
+                        "name": "empty_cart_label",
+                        "widget": "string",
+                        "required": true,
+                        "default": "Cart is Empty"
+                    },
+                    
+                ]
+            },
+            {
                 "file": "exampleSite/data/social_links.yaml",
                 "label": "Social Links",
                 "name": "data_social_links",
@@ -405,7 +458,7 @@ let collections = [
         "files": [
             {
                 "file": "exampleSite/content/blog/_index.md",
-                "label": "Post Listing Page",
+                "label": "Blog Post Listing Page",
                 "name": "section_blog",
                 "fields": [
                     {
@@ -1225,7 +1278,7 @@ let collections = [
     {
         "name": "home_contents",
         "identifier_field": "title",
-        "label": "Home Contents",
+        "label": "Custom Home Contents",
         "label_singular": "Content Section",
         "folder": "exampleSite/content/home/contents",
         "filter": {
@@ -1278,6 +1331,44 @@ let collections = [
                         "widget": "list",
                         "label_singular": "Template",
                         "types": [
+                            {
+                                "label": "Dynamic Home Content",
+                                "name": "content_centered",
+                                "widget": "object",
+                                "summary": "Dynamic Content / Centered: {{fields.title}}",
+                                "fields": [
+                                    {
+                                        "label": "Template",
+                                        "name": "template",
+                                        "widget": "hidden",
+                                        "default": "templates/content/centered.html"
+                                    },
+                                    {
+                                        "label": "Intro",
+                                        "name": "intro",
+                                        "widget": "string"
+                                    },
+                                    {
+                                        "label": "Summary",
+                                        "name": "summary",
+                                        "widget": "string"
+                                    },
+                                    {
+                                        "label": "Home Content Section",
+                                        "name": "filename",
+                                        "widget": "relation",
+                                        "hint": "Content Used Here Is From Home Contents. Be Sure to Create Content There So You Can Use it Here!",
+                                        "collection": "home_contents",
+                                        "display_fields": [
+                                            "title"
+                                        ],
+                                        "search_fields": [
+                                            "title"
+                                        ],
+                                        "value_field": "home/contents/{{slug}}"
+                                    }
+                                ]
+                            },
                             {
                                 "label": "Hero Simple Centered",
                                 "name": "hero_simple_centered",
@@ -4363,44 +4454,6 @@ let collections = [
                                                 "default": "#"
                                             }
                                         ]
-                                    }
-                                ]
-                            },
-                            {
-                                "label": "Content Centered",
-                                "name": "content_centered",
-                                "widget": "object",
-                                "summary": "Content/Centered: {{fields.title}}",
-                                "fields": [
-                                    {
-                                        "label": "Template",
-                                        "name": "template",
-                                        "widget": "hidden",
-                                        "default": "templates/content/centered.html"
-                                    },
-                                    {
-                                        "label": "Intro",
-                                        "name": "intro",
-                                        "widget": "string"
-                                    },
-                                    {
-                                        "label": "Summary",
-                                        "name": "summary",
-                                        "widget": "string"
-                                    },
-                                    {
-                                        "label": "Home Content Section",
-                                        "name": "filename",
-                                        "widget": "relation",
-                                        "hint": "Content Used Here Is From Home Contents. Be Sure to Create Content There So You Can Use it Here!",
-                                        "collection": "home_contents",
-                                        "display_fields": [
-                                            "title"
-                                        ],
-                                        "search_fields": [
-                                            "title"
-                                        ],
-                                        "value_field": "home/contents/{{slug}}"
                                     }
                                 ]
                             },
