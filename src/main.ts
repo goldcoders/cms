@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config({ path: '../../.env' });
 window.CMS_MANUAL_INIT = true
 
 import { init } from 'netlify-cms';
