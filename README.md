@@ -12,15 +12,15 @@
 ### Integration on Thriftshop Ecommerce App
 
 - open gitbash on windows , or terminal on linux / mac
-- change directory to the thriftshop theme folder e.g.: `cd ~/theme`
-- git clone https://github.com/goldcoders/cms
-- make sure your are on netlify-cms branch to change branch type: `git checkout netlify-cms`
-- install all the dependencies `yarn`
+- change directory to the thriftshop theme folder e.g.: type command: `cd ~/theme`
+- type command: `git clone https://github.com/goldcoders/cms`
+- make sure your are on netlify-cms branch to change branch type command: `git checkout netlify-cms`
+- install all the dependencies type command: `yarn`
 
 ### SET Your .env on Thriftshop App
 
 - add the following env variables to the thriftshop .env file
-- inside thritshop theme folder on windows type: `notepad .env` on linux or mac use your preferred editor e.g.: `vim .env`
+- inside thritshop theme folder on windows type command: `notepad .env` on linux or mac use your preferred editor e.g.: `vim .env`
 - Add this new Default values
 
 ```
