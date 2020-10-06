@@ -3,6 +3,7 @@ import type {Backend} from './backend'
 export interface Config  {
     backend: Backend;
     local_backend: boolean;
+    load_config_file?: boolean;
     media_folder?: string;
     public_folder?: string;
     site_url?: string;
