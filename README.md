@@ -1,30 +1,27 @@
-# CMS
+# Thriftshop CMS Beta Version
 
 ## Requirements
-- git
-- nodejs & npm (latest)
-- yarn (latest)
+- [git](https://git-scm.com/downloads)
+- [nodejs & npm](https://nodejs.org/en/download/)
+- [hugo](https://github.com/gohugoio/hugo/releases)
+- [yarn](https://yarnpkg.com/getting-started/install)
 
-### Installation
-- go to thriftshop app folder
+## Important on Windows Users
+- add Hugo to your system env variables, hugo command must be accessible globally
+
+### Integration on Thriftshop Ecommerce App
+
+- open gitbash on windows , or terminal on linux / mac
+- change directory to the thriftshop theme folder e.g.: `cd ~/theme`
 - git clone https://github.com/goldcoders/cms
+- make sure your are on netlify-cms branch to change branch type: `git checkout netlify-cms`
+- install all the dependencies `yarn`
 
-### Add Dependencies
+### SET Your .env on Thriftshop App
 
-- yarn add netlify-cms netlify-cms-proxy-server npm-run-all parcel-bundler typescript
-
-### Update Package.json on thriftshop app
-
-```
-"scripts":{
-"cms-dev": "parcel cms/src/index.html -d exampleSite/static/admin",
-"cms-build": "parcel build cms/src/index.html -d exampleSite/static/admin",
-"cms-proxy": "netlify-cms-proxy-server",
-"start": "run-p cms-proxy cms-dev dev"
-}
-```
-
-### Merge ENV variables to your existing one
+- add the following env variables to the thriftshop .env file
+- inside thritshop theme folder on windows type: `notepad .env` on linux or mac use your preferred editor e.g.: `vim .env`
+- Add this new Default values
 
 ```
 LOCAL_BACKEND=true
@@ -35,9 +32,19 @@ DISPLAY_URL=http://localhost:1234
 LOGO_URL=http://localhost:1234/images/logo.svg
 PUBLIC_FOLDER=/images
 ```
-### RUN CMS
 
-- yarn start
+> for list of all available .env variables [check this](https://gist.github.com/codeitlikemiley/33660ae3f1f5bae91595cdac072d70e1)
 
-## Todo
-- Add Additional Shortcodes
+
+### RUN CMS on thriftshop
+
+- yarn cms
+- open one browser on left side on `http://localhost:1234` (LOCAL CMS)
+- open one browser on right side on `http://localhost:1313` (LOCAL SITE WITH LIVE RELOAD)
+
+## TODO
+- Add Additional Custom Shortcodes to Hugo and CMS
+
+## License
+
+[MIT](./LICENSE)
