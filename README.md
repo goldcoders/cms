@@ -1,5 +1,7 @@
 # Thriftshop CMS Beta Version
 
+![pic-full-201006-1521-00](https://user-images.githubusercontent.com/55337687/95170828-9eeb6980-07e7-11eb-8283-6554e533b68f.png)
+
 ## Requirements
 - [git](https://git-scm.com/downloads)
 - [nodejs & npm](https://nodejs.org/en/download/)
