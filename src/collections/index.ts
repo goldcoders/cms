@@ -1,3 +1,8 @@
+import GapSizes from "../options/GapSizes";
+import HTTPMETHODS from "../options/HTTPMETHODS";
+import InputTags from "../options/InputTags";
+import SizeOptions from "../options/SizeOptions"
+
 let collections = [
     {
         "name": "configs",
@@ -765,12 +770,7 @@ let collections = [
                                 "label": "Method",
                                 "name": "method",
                                 "widget": "select",
-                                "options": [
-                                    "POST",
-                                    "GET",
-                                    "UPDATE",
-                                    "DELETE"
-                                ]
+                                "options": HTTPMETHODS
                             },
                             {
                                 "label": "Form Submit",
@@ -883,10 +883,7 @@ let collections = [
                                                 "label": "HTML TAG",
                                                 "name": "tag",
                                                 "widget": "select",
-                                                "options": [
-                                                    "input",
-                                                    "textarea"
-                                                ],
+                                                "options": InputTags,
                                                 "default": "input"
                                             },
                                             {
@@ -964,10 +961,7 @@ let collections = [
                                                 "label": "HTML TAG",
                                                 "name": "tag",
                                                 "widget": "select",
-                                                "options": [
-                                                    "input",
-                                                    "textarea"
-                                                ],
+                                                "options": InputTags,
                                                 "default": "input"
                                             },
                                             {
@@ -1798,27 +1792,7 @@ let collections = [
                                                 "label": "Column Gaps",
                                                 "name": "gaps",
                                                 "widget": "select",
-                                                "options": [
-                                                    "0",
-                                                    "1",
-                                                    "2",
-                                                    "3",
-                                                    "4",
-                                                    "5",
-                                                    "6",
-                                                    "8",
-                                                    "10",
-                                                    "12",
-                                                    "16",
-                                                    "20",
-                                                    "24",
-                                                    "32",
-                                                    "40",
-                                                    "48",
-                                                    "56",
-                                                    "64",
-                                                    "px"
-                                                ],
+                                                "options": GapSizes,
                                                 "default": "8"
                                             },
                                             {
@@ -3162,28 +3136,7 @@ let collections = [
                                                 "label": "Column Gaps",
                                                 "name": "gaps",
                                                 "widget": "select",
-                                                "options": [
-                                                    "0",
-                                                    "0.5",
-                                                    "1",
-                                                    "2",
-                                                    "3",
-                                                    "4",
-                                                    "5",
-                                                    "6",
-                                                    "8",
-                                                    "10",
-                                                    "12",
-                                                    "16",
-                                                    "20",
-                                                    "24",
-                                                    "32",
-                                                    "40",
-                                                    "48",
-                                                    "56",
-                                                    "64",
-                                                    "px"
-                                                ],
+                                                "options": GapSizes,
                                                 "default": "0.5"
                                             },
                                             {
@@ -3312,27 +3265,7 @@ let collections = [
                                                 "label": "Column Gaps",
                                                 "name": "gaps",
                                                 "widget": "select",
-                                                "options": [
-                                                    "0",
-                                                    "1",
-                                                    "2",
-                                                    "3",
-                                                    "4",
-                                                    "5",
-                                                    "6",
-                                                    "8",
-                                                    "10",
-                                                    "12",
-                                                    "16",
-                                                    "20",
-                                                    "24",
-                                                    "32",
-                                                    "40",
-                                                    "48",
-                                                    "56",
-                                                    "64",
-                                                    "px"
-                                                ],
+                                                "options": GapSizes,
                                                 "default": "8"
                                             },
                                             {
@@ -3616,27 +3549,7 @@ let collections = [
                                                 "label": "Column Gaps",
                                                 "name": "gaps",
                                                 "widget": "select",
-                                                "options": [
-                                                    "0",
-                                                    "1",
-                                                    "2",
-                                                    "3",
-                                                    "4",
-                                                    "5",
-                                                    "6",
-                                                    "8",
-                                                    "10",
-                                                    "12",
-                                                    "16",
-                                                    "20",
-                                                    "24",
-                                                    "32",
-                                                    "40",
-                                                    "48",
-                                                    "56",
-                                                    "64",
-                                                    "px"
-                                                ],
+                                                "options": GapSizes,
                                                 "default": "0.5"
                                             },
                                             {
@@ -3663,7 +3576,8 @@ let collections = [
                                             {
                                                 "label": "Image Height",
                                                 "name": "height",
-                                                "widget": "number",
+                                                "widget": "select",
+                                                "options": SizeOptions,
                                                 "default": 12
                                             },
                                             {
@@ -4487,27 +4401,7 @@ let collections = [
                                         "label": "Column Gaps",
                                         "name": "gap",
                                         "widget": "select",
-                                        "options": [
-                                            "0",
-                                            "1",
-                                            "2",
-                                            "3",
-                                            "4",
-                                            "5",
-                                            "6",
-                                            "8",
-                                            "10",
-                                            "12",
-                                            "16",
-                                            "20",
-                                            "24",
-                                            "32",
-                                            "40",
-                                            "48",
-                                            "56",
-                                            "64",
-                                            "px"
-                                        ],
+                                        "options": GapSizes,
                                         "default": "8"
                                     },
                                     {

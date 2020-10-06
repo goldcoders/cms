@@ -2,7 +2,7 @@ require("dotenv").config({ path: '../../.env' });
 window.CMS_MANUAL_INIT = true
 
 import { init } from 'netlify-cms';
-import collections from './collections';
+import collections from './collections/index';
 import './shortcodes';
 import './events';
 
