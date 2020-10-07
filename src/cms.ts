@@ -13,12 +13,13 @@ let config: Config = {
         name: "git-gateway",
         branch: "netlify-cms"
     },
-    load_config_file: false,
-    local_backend: true,
-    media_folder: "exampleSite/static/images",
-    public_folder: "/images",
-    logo_url: "/images/logo.svg",
-    show_preview_links: false,
+    local_backend: JSON.parse(process.env.LOCAL_BACKEND),
+    media_folder: process.env.MEDIA_FOLDER,
+    public_folder: process.env.PUBLIC_FOLDER,
+    site_url: process.env.SITE_URL,
+    display_url: process.env.DISPLAY_URL,
+    logo_url: process.env.LOGO_URL,
+    show_preview_links: JSON.parse(process.env.SHOW_PREVIEW_LINKS),
     collections
 }
 
