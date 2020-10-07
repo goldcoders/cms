@@ -1,15 +1,18 @@
-# Thriftshop CMS Beta Version
+# Thriftshop Desktop CMS Beta Version
 
 ![pic-full-201006-1521-00](https://user-images.githubusercontent.com/55337687/95170828-9eeb6980-07e7-11eb-8283-6554e533b68f.png)
 
-## Requirements
+## Basic Requirements
 - [git](https://git-scm.com/downloads)
 - [nodejs & npm](https://nodejs.org/en/download/)
 - [hugo](https://github.com/gohugoio/hugo/releases)
 - [yarn](https://yarnpkg.com/getting-started/install)
 
-## Important on Windows Users
-- add Hugo to your system env variables, hugo command must be accessible globally
+## Set ENV Path
+- on windows you need to manually add hugo to the sysytem PATH variables
+
+## Note On Windows Users
+- majority of the command only runs on git bash
 
 ### Integration on Thriftshop Ecommerce App
 
@@ -21,24 +24,27 @@
 
 ### SET Your .env on Thriftshop App
 
-- add the following env variables to the thriftshop .env file
-- inside thritshop theme folder on windows type command: `notepad .env` on linux or mac use your preferred editor e.g.: `vim .env`
-- Add this new Default values
+> Assuming you are already inside `cms` folder
+
+- run this command `mv .env.example .env`
+
+> Note: setting .env inside `cms` folder overrides .env on the `theme` folder
+
+- edit `.env` file on windows type command: `notepad .env` on other OS (linux max) use your default editor eg.: `vim .env`
+- modify SITE_URL and DISPLAY_URL according to your domain name
+- you can also modify logo on login page by modifying LOGO_URL
 
 ```
 LOCAL_BACKEND=true
 SHOW_PREVIEW_LINKS=true
 MEDIA_FOLDER=exampleSite/static/images
-SITE_URL=http://localhost:1234
-DISPLAY_URL=http://localhost:1234
+SITE_URL=
+DISPLAY_URL=
 LOGO_URL=http://localhost:1234/images/logo.svg
 PUBLIC_FOLDER=/images
 ```
 
-> for list of all available .env variables [check this](https://gist.github.com/codeitlikemiley/33660ae3f1f5bae91595cdac072d70e1)
-
-
-### RUN CMS on thriftshop
+### RUN CMS on thriftshop locally
 
 - yarn cms
 - open one browser on left side on `http://localhost:1234` (LOCAL CMS)
