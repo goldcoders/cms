@@ -1,5 +1,3 @@
-(window as any).CMS_MANUAL_INIT = true
-
 import { init } from 'netlify-cms';
 import collections from './collections/index';
 import type {Config} from './Structs/config';

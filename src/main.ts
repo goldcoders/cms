@@ -14,9 +14,8 @@ let config: Config = {
     load_config_file: false,
     media_folder: 'exampleSite/static/images',
     public_folder: '/images',
-    site_url: process.env.HUGO_BASEURL ?? '/',
-    display_url: process.env.HUGO_BASEURL ?? '/',
-    logo_url: process.env.LOGIN_LOGO_URL ?? '/images/logo.svg',
+    site_url: process.env.HUGO_BASEURL,
+    display_url: process.env.HUGO_BASEURL,
     show_preview_links: false,
     collections
 }
