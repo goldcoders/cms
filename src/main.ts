@@ -13,12 +13,13 @@ let config: Config = {
         name: "git-gateway",
         branch: "netlify-cms"
     },
+    local_backend: false,
     load_config_file: false,
     media_folder: "exampleSite/static/images",
     public_folder: "/images",
     logo_url: "/images/logo.svg",
-    site_url: "/",
-    display_url: "/",
+    site_url: "https://thriftshop.netlify.app",
+    display_url: "https://thriftshop.netlify.app",
     show_preview_links: false,
     collections
 }
