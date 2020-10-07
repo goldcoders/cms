@@ -1,5 +1,3 @@
-(window as any).CMS_MANUAL_INIT = true
-
 import { init } from 'netlify-cms';
 import collections from './collections/index';
 import type {Config} from './Structs/config';
@@ -12,12 +10,12 @@ let backend: Backend = {
 
 let config: Config = {
     backend,
-    local_backend: true,
+    local_backend: JSON.parse(process.env.LOCAL_BACKEND),
     load_config_file: false,
     media_folder: 'exampleSite/static/images',
     public_folder: '/images',
-    site_url: '/',
-    display_url: '/',
+    site_url: process.env.SITE_URL,
+    display_url: process.env.DISPLAY_URL,
     logo_url: '/images/logo.svg',
     show_preview_links: false,
     collections
