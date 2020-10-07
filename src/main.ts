@@ -17,6 +17,8 @@ let config: Config = {
     media_folder: "exampleSite/static/images",
     public_folder: "/images",
     logo_url: "/images/logo.svg",
+    site_url: "/",
+    display_url: "/",
     show_preview_links: false,
     collections
 }
