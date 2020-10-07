@@ -1,27 +1,27 @@
-window.CMS_MANUAL_INIT = true
+(window as any).CMS_MANUAL_INIT = true
 
 import { init } from 'netlify-cms';
 import collections from './collections/index';
-import './shortcodes';
-import './events';
-
 import type {Config} from './Structs/config';
+import {Backend} from './Structs/backend';
 
+let backend: Backend = {
+    name: "git-gateway",
+    branch: "netlify-cms"
+}
 
 let config: Config = {
-    backend: {
-        name: "git-gateway",
-        branch: "netlify-cms"
-    },
-    local_backend: false,
-    load_config_file: false,
-    media_folder: "exampleSite/static/images",
-    public_folder: "/images",
-    logo_url: "/images/logo.svg",
-    site_url: "https://thriftshop.netlify.app",
-    display_url: "https://thriftshop.netlify.app",
+    backend,
+    local_backend: true,
+    media_folder: 'exampleSite/static/images',
+    public_folder: '/images',
+    site_url: '/',
+    display_url: '/',
+    logo_url: '/images/logo.svg',
     show_preview_links: false,
     collections
 }
-
 init({config});
+
+import './shortcodes';
+import './events';

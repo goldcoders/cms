@@ -1,4 +1,6 @@
+type  Repo =  "github"|"gitlab"|"bitbucket"|"git-gateway";
+
 export interface Backend {
-  name: string;
+  name: Repo;
   branch?: string;
 }

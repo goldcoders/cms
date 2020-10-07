@@ -1,18 +1,17 @@
-window.CMS_MANUAL_INIT = true
+(window as any).CMS_MANUAL_INIT = true
 
 import { init } from 'netlify-cms';
 import collections from './collections/index';
-import './shortcodes';
-import './events';
-
 import type {Config} from './Structs/config';
+import {Backend} from './Structs/backend';
 
+let backend: Backend = {
+    name: "git-gateway",
+    branch: "netlify-cms"
+}
 
 let config: Config = {
-    backend: {
-        name: "git-gateway",
-        branch: "netlify-cms"
-    },
+    backend,
     local_backend: JSON.parse(process.env.LOCAL_BACKEND),
     media_folder: process.env.MEDIA_FOLDER,
     public_folder: process.env.PUBLIC_FOLDER,
@@ -22,5 +21,7 @@ let config: Config = {
     show_preview_links: JSON.parse(process.env.SHOW_PREVIEW_LINKS),
     collections
 }
-
 init({config});
+
+import './shortcodes';
+import './events';
