@@ -14,7 +14,6 @@ let config: Config = {
         branch: "netlify-cms"
     },
     load_config_file: false,
-    local_backend: true,
     media_folder: "exampleSite/static/images",
     public_folder: "/images",
     logo_url: "/images/logo.svg",
