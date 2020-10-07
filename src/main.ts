@@ -10,13 +10,13 @@ let backend: Backend = {
 
 let config: Config = {
     backend,
-    local_backend: JSON.parse(process.env.LOCAL_BACKEND),
+    local_backend: false,
     load_config_file: false,
     media_folder: 'exampleSite/static/images',
     public_folder: '/images',
-    site_url: process.env.SITE_URL,
-    display_url: process.env.DISPLAY_URL,
-    logo_url: '/images/logo.svg',
+    site_url: process.env.HUGO_BASEURL ?? '/',
+    display_url: process.env.HUGO_BASEURL ?? '/',
+    logo_url: process.env.LOGIN_LOGO_URL ?? '/images/logo.svg',
     show_preview_links: false,
     collections
 }
