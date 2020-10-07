@@ -13,6 +13,7 @@ let backend: Backend = {
 let config: Config = {
     backend,
     local_backend: true,
+    load_config_file: false,
     media_folder: 'exampleSite/static/images',
     public_folder: '/images',
     site_url: '/',
