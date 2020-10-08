@@ -35,12 +35,11 @@
 - you can also modify logo on login page by modifying LOGO_URL
 
 ```
-HUGO_BASEURL=
 LOCAL_BACKEND=true
 SHOW_PREVIEW_LINKS=true
 MEDIA_FOLDER=exampleSite/static/images
-SITE_URL=
-DISPLAY_URL=
+SITE_URL=http://goldcoders.net
+DISPLAY_URL=http://goldcoders.net
 LOGO_URL=/images/logo.svg
 PUBLIC_FOLDER=/images
 ```
