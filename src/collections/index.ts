@@ -511,7 +511,7 @@ let collections = [
                     {
                         "label": "Description",
                         "name": "description",
-                        "widget": "string"
+                        "widget": "text"
                     },
                     {
                         "label": "Featured Image",
@@ -571,7 +571,7 @@ let collections = [
                     {
                         "label": "Description",
                         "name": "description",
-                        "widget": "string"
+                        "widget": "text"
                     },
                     {
                         "label": "Featured Image",
@@ -631,7 +631,7 @@ let collections = [
                     {
                         "label": "Description",
                         "name": "description",
-                        "widget": "string"
+                        "widget": "text"
                     },
                     {
                         "label": "Featured Image",
@@ -689,7 +689,7 @@ let collections = [
                     {
                         "label": "Description",
                         "name": "description",
-                        "widget": "string"
+                        "widget": "text"
                     },
                     {
                         "label": "Featured Image",
@@ -1110,7 +1110,7 @@ let collections = [
                     {
                         "label": "Description",
                         "name": "description",
-                        "widget": "string"
+                        "widget": "text"
                     },
                     {
                         "label": "Featured Image",
@@ -1384,7 +1384,7 @@ let collections = [
                                     {
                                         "label": "Description",
                                         "name": "description",
-                                        "widget": "string",
+                                        "widget": "text",
                                         "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
                                     },
                                     {
@@ -1468,7 +1468,7 @@ let collections = [
                                     {
                                         "label": "Description",
                                         "name": "description",
-                                        "widget": "string",
+                                        "widget": "text",
                                         "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
                                     },
                                     {
@@ -1558,7 +1558,7 @@ let collections = [
                                     {
                                         "label": "Description",
                                         "name": "description",
-                                        "widget": "string",
+                                        "widget": "text",
                                         "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
                                     },
                                     {
@@ -1648,7 +1648,7 @@ let collections = [
                                     {
                                         "label": "Description",
                                         "name": "description",
-                                        "widget": "string",
+                                        "widget": "text",
                                         "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
                                     },
                                     {
@@ -1876,7 +1876,7 @@ let collections = [
                                     {
                                         "label": "Description",
                                         "name": "description",
-                                        "widget": "string",
+                                        "widget": "text",
                                         "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt."
                                     },
                                     {
@@ -2020,7 +2020,7 @@ let collections = [
                                     {
                                         "label": "Description",
                                         "name": "description",
-                                        "widget": "string"
+                                        "widget": "text"
                                     },
                                     {
                                         "label": "Template",
@@ -2041,7 +2041,7 @@ let collections = [
                                             {
                                                 "label": "Description",
                                                 "name": "description",
-                                                "widget": "string"
+                                                "widget": "text"
                                             },
                                             {
                                                 "label": "Image",
@@ -2082,7 +2082,7 @@ let collections = [
                                             {
                                                 "label": "Description",
                                                 "name": "description",
-                                                "widget": "string"
+                                                "widget": "text"
                                             },
                                             {
                                                 "label": "Image",
@@ -2118,7 +2118,7 @@ let collections = [
                                             {
                                                 "label": "Description",
                                                 "name": "description",
-                                                "widget": "string"
+                                                "widget": "text"
                                             },
                                             {
                                                 "label": "Image",
@@ -2271,7 +2271,7 @@ let collections = [
                                     {
                                         "label": "Description",
                                         "name": "description",
-                                        "widget": "string"
+                                        "widget": "text"
                                     },
                                     {
                                         "label": "Left Side Image",
@@ -2755,7 +2755,7 @@ let collections = [
                                     {
                                         "label": "Description",
                                         "name": "description",
-                                        "widget": "string"
+                                        "widget": "text"
                                     },
                                     {
                                         "label": "Newsletter Form",
@@ -2922,7 +2922,7 @@ let collections = [
                                     {
                                         "label": "Description",
                                         "name": "description",
-                                        "widget": "string"
+                                        "widget": "text"
                                     },
                                     {
                                         "label": "Newsletter Form",
@@ -3363,7 +3363,7 @@ let collections = [
                                     {
                                         "label": "Description",
                                         "name": "description",
-                                        "widget": "string"
+                                        "widget": "text"
                                     },
                                     {
                                         "label": "Backgroud Color",
@@ -3578,7 +3578,7 @@ let collections = [
                                                 "name": "height",
                                                 "widget": "select",
                                                 "options": SizeOptions,
-                                                "default": 12
+                                                "default": 24
                                             },
                                             {
                                                 "label": "Images",
@@ -3654,7 +3654,7 @@ let collections = [
                                     {
                                         "label": "Description",
                                         "name": "description",
-                                        "widget": "string",
+                                        "widget": "text",
                                         "default": "Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque amet indis perferendis blanditiis repellendus etur quidem assumenda."
                                     },
                                     {
@@ -3931,7 +3931,7 @@ let collections = [
                                     {
                                         "label": "Description",
                                         "name": "description",
-                                        "widget": "string",
+                                        "widget": "text",
                                         "default": "Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque amet indis perferendis blanditiis repellendus etur quidem assumenda."
                                     },
                                     {
@@ -4141,7 +4141,7 @@ let collections = [
                                     {
                                         "label": "Description",
                                         "name": "description",
-                                        "widget": "string",
+                                        "widget": "text",
                                         "default": "Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque amet indis perferendis blanditiis repellendus etur quidem assumenda."
                                     },
                                     {
@@ -4293,7 +4293,7 @@ let collections = [
                                             {
                                                 "label": "Description",
                                                 "name": "description",
-                                                "widget": "string"
+                                                "widget": "text"
                                             },
                                             {
                                                 "label": "CTA Buttons",
@@ -4393,7 +4393,7 @@ let collections = [
                                     {
                                         "label": "Description",
                                         "name": "description",
-                                        "widget": "string",
+                                        "widget": "text",
                                         "hint": "Give Brief Intro , Describing These Group",
                                         "required": false
                                     },
@@ -4579,7 +4579,7 @@ let collections = [
             {
                 "label": "Description",
                 "name": "description",
-                "widget": "string"
+                "widget": "text"
             },
             {
                 "label": "Featured Image",
@@ -4762,7 +4762,7 @@ let collections = [
             {
                 "label": "Description",
                 "name": "description",
-                "widget": "string"
+                "widget": "text"
             },
             {
                 "label": "Featured Image",
@@ -5015,7 +5015,7 @@ let collections = [
             {
                 "label": "Description",
                 "name": "description",
-                "widget": "string"
+                "widget": "text"
             },
             {
                 "label": "Featured Image",
