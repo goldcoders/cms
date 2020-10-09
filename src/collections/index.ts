@@ -365,6 +365,13 @@ let collections = [
                                             "(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
                                             "ONLY VALID URL ALLOWED!"
                                         ]
+                                    },
+                                    {
+                                        "label": "Icon",
+                                        "name": "icon",
+                                        "widget": "image",
+                                        "required": false,
+                                        "default": "/images/facebook.svg"
                                     }
                                 ]
                             },
@@ -381,6 +388,13 @@ let collections = [
                                             "(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
                                             "ONLY VALID URL ALLOWED!"
                                         ]
+                                    },
+                                    {
+                                        "label": "Icon",
+                                        "name": "icon",
+                                        "widget": "image",
+                                        "required": false,
+                                        "default": "/images/instagram.svg"
                                     }
                                 ]
                             },
@@ -397,6 +411,13 @@ let collections = [
                                             "(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
                                             "ONLY VALID URL ALLOWED!"
                                         ]
+                                    },
+                                    {
+                                        "label": "Icon",
+                                        "name": "icon",
+                                        "widget": "image",
+                                        "required": false,
+                                        "default": "/images/twitter.svg"
                                     }
                                 ]
                             },
@@ -413,6 +434,13 @@ let collections = [
                                             "(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
                                             "ONLY VALID URL ALLOWED!"
                                         ]
+                                    },
+                                    {
+                                        "label": "Icon",
+                                        "name": "icon",
+                                        "widget": "image",
+                                        "required": false,
+                                        "default": "/images/github.svg"
                                     }
                                 ]
                             },
@@ -429,6 +457,13 @@ let collections = [
                                             "(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
                                             "ONLY VALID URL ALLOWED!"
                                         ]
+                                    },
+                                    {
+                                        "label": "Icon",
+                                        "name": "icon",
+                                        "widget": "image",
+                                        "required": false,
+                                        "default": "/images/youtube.svg"
                                     }
                                 ]
                             },
@@ -445,6 +480,13 @@ let collections = [
                                             "(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
                                             "ONLY VALID URL ALLOWED!"
                                         ]
+                                    },
+                                    {
+                                        "label": "Icon",
+                                        "name": "icon",
+                                        "widget": "image",
+                                        "required": false,
+                                        "default": "/images/linkedin.svg"
                                     }
                                 ]
                             }
