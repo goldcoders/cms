@@ -37,7 +37,15 @@ let collections = [
                         "label": "Google Analytics",
                         "name": "googleAnalytics",
                         "widget": "string",
+                        "required": false,
                         "hint": "type: UA-{YOUR_ANALYTICS_ID}"
+                    },
+                    {
+                        "label": "Disqus",
+                        "name": "disqusShortname",
+                        "widget": "string",
+                        "required": false,
+                        "hint": "type Disqus Shortname"
                     },
                     {
                         "label": "Section Pages Pagination",
