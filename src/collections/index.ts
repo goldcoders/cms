@@ -336,7 +336,7 @@ let collections = [
                         "required": true,
                         "default": "Cart is Empty"
                     },
-                    
+
                 ]
             },
             {
@@ -4703,11 +4703,7 @@ let collections = [
             "field": "index",
             "value": false
         },
-        "path": "{{slug}}/index",
         "create": true,
-        "media_folder": "resources",
-        "public_folder": "products/{{slug}}/resources",
-        "preview_path": "products/{{fields.slug}}",
         "editor": {
             "preview": false
         },
@@ -4814,29 +4810,13 @@ let collections = [
             },
             {
                 "label": "Images",
-                "name": "resources",
+                "name": "images",
                 "required": false,
                 "collapsed": true,
                 "label_singular": "Image",
                 "widget": "list",
                 "hint": "Note: When Page Title is Changed Remove All Images and Choose Each Images Again.",
-                "fields": [
-                    {
-                        "label": "Image",
-                        "name": "src",
-                        "widget": "image"
-                    },
-                    {
-                        "label": "Name",
-                        "name": "name",
-                        "widget": "string",
-                        "hint": "Any Unique Key For This Product Resources",
-                        "pattern": [
-                            "^[a-z0-9]+(?:-[a-z0-9]+)*$",
-                            "Letters, Numbers and Dash Only"
-                        ]
-                    }
-                ]
+                "field": { "label": "Image", "name": "src", "widget": "image" }
             },
             {
                 "label": "Content",
