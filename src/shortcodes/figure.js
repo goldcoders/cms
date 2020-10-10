@@ -22,9 +22,9 @@ CMS.registerEditorComponent({
         };
     },
     toBlock: function(obj) {
-        return `{{< figure src="${obj.src}" title="${obj.title}" >}}`;
+        return `{{< figure src="/${obj.src}" title="${obj.title}" >}}`;
     },
     toPreview: function(obj) {
-        return `<figure><img src=${obj.src} alt=${obj.title}><figcaption>${obj.title}</figcaption></figure>`;
+        return `<figure><img src="/${obj.src}" alt="${obj.title}"><figcaption>${obj.title}</figcaption></figure>`;
     },
 });
