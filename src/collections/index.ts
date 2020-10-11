@@ -4780,7 +4780,7 @@ let collections = [
                 ]
             },
             {
-                "label": "Price",
+                "label": "Base Price",
                 "name": "price",
                 "widget": "string",
                 "hint": "Currency in PHP",
@@ -4817,21 +4817,32 @@ let collections = [
                 "hint": "Note: When Page Title is Changed Remove Image and Choose Image Again."
             },
             {
-                "label": "Images",
-                "name": "images",
-                "required": false,
-                "collapsed": true,
-                "label_singular": "Image",
-                "widget": "list",
-                "hint": "Note: When Page Title is Changed Remove All Images and Choose Each Images Again.",
-                "field": { "label": "Image", "name": "src", "widget": "image" }
-            },
-            {
                 "label": "Product Options",
                 "name": "options",
                 "widget": "list",
                 "label_singular": "Option",
                 "types": [
+                    {
+                        "label": "Base Model Images",
+                        "name": "options_base",
+                        "widget": "object",
+                        "summary": "Size: {{fields.name}}",
+                        "fields": [
+                            {
+                                "label": "Option Name",
+                                "name": "name",
+                                "widget": "hidden",
+                                "default": "base_model",
+                            },
+                            {
+                                "label": "Image",
+                                "name": "image",
+                                "widget": "image",
+                                "required": false,
+                                "hint": "Note: Image Upload Here Will Be Shown In Carousel"
+                            },
+                        ]
+                    },
                     {
                         "label": "Color Options",
                         "name": "options_color",
@@ -4847,45 +4858,89 @@ let collections = [
                             {
                                 "label": "Option Name",
                                 "name": "name",
-                                "widget": "string"
+                                "widget": "string",
+                                "hint": "Note: Will Be Used Instead of Product Title e.g.: White Lebron 17 Shoes"
                             },
                             {
                                 "label": "Default Option",
                                 "name": "default",
                                 "widget": "boolean",
                                 "required": false,
-                                "default": false
+                                "default": false,
+                                "hint": "This Will Be The Default Options For This Type",
                             },
                             {
-                                "label": "Color",
+                                "label": "Pick A Color",
                                 "name": "color",
-                                "widget": "relation",
-                                "collection": "colors",
-                                "file": "color_list",
-                                "display_fields": [
-                                    "colors.*.name"
-                                ],
-                                "search_fields": [
-                                    "colors.*.name"
-                                ],
-                                "value_field": "colors.*.value"
+                                "widget": "color",
+                                "picker": "sketch",
                             },
                             {
-                                "label": "Shade",
-                                "name": "shade",
-                                "widget": "relation",
-                                "collection": "colors",
-                                "file": "color_list",
+                                "label": "Change Based Price?",
+                                "name": "change",
+                                "widget": "select",
+                                "default": "no",
                                 "required": false,
-                                "default": "",
-                                "hint": "themable colors have no shade e.g. primary, secondary , accent, etc. and neutral color such as black, white, and transparent.",
-                                "display_fields": [
-                                    "shades.*.name"
-                                ],
-                                "search_fields": [
-                                    "shades.*.name"
-                                ],
-                                "value_field": "shades.*.value"
+                                "options": ["add", "subtract", "no"]
+                            },
+                            {
+                                "label": "Amount",
+                                "name": "amount",
+                                "widget": "string",
+                                "required": false,
+                                "hint": "The Amount To Add or Subtract From Base Price",
+                                "pattern": [
+                                    "[0-9]*\\.[0-9][0-9]",
+                                    "Numbers with at least 2 Decimal places"
+                                ]
+                            },
+                            {
+                                "label": "Image",
+                                "name": "image",
+                                "widget": "image",
+                                "required": false,
+                                "hint": "Note: Image Upload Here Will Be Shown In Carousel"
+                            },
+                        ]
+                    },
+                    {
+                        "label": "Size Options",
+                        "name": "options_size",
+                        "widget": "object",
+                        "summary": "Size: {{fields.name}}",
+                        "fields": [
+                            {
+                                "label": "Size Name",
+                                "name": "name",
+                                "widget": "string",
+                                "hint": "e.g.: Small , or 7 inch",
+                            },
+                            {
+                                "label": "Default Option",
+                                "name": "default",
+                                "widget": "boolean",
+                                "required": false,
+                                "default": false,
+                                "hint": "This Will Be The Default Options For This Type",
+                            },
+                            {
+                                "label": "Change Based Price",
+                                "name": "change",
+                                "widget": "select",
+                                "default": "no",
+                                "required": false,
+                                "options": ["add", "subtract", "no"]
+                            },
+                            {
+                                "label": "Amount",
+                                "name": "amount",
+                                "widget": "string",
+                                "required": false,
+                                "hint": "The Amount To Add or Subtract From Base Price",
+                                "pattern": [
+                                    "[0-9]*\\.[0-9][0-9]",
+                                    "Numbers with at least 2 Decimal places"
+                                ]
                             }
                         ]
                     },

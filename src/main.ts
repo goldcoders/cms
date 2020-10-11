@@ -23,3 +23,4 @@ init({config});
 
 import './shortcodes';
 import './events';
+import './widgets';
