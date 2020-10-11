@@ -4850,12 +4850,6 @@ let collections = [
                         "summary": "Color: {{fields.name}}",
                         "fields": [
                             {
-                                "label": "Template",
-                                "name": "template",
-                                "widget": "hidden",
-                                "default": "partials/templates/product_options/colors.html"
-                            },
-                            {
                                 "label": "Option Name",
                                 "name": "name",
                                 "widget": "string",
