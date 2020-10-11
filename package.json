@@ -12,11 +12,12 @@
     "cms-build": "esbuild --bundle src/main.ts --minify --outfile=dist/main.js",
     "cms-proxy": "netlify-cms-proxy-server",
     "cms": "run-p cms-dev cms-proxy",
-    "production": "node --require dotenv/config ./esbuild.js",
-    "prod": "node --require dotenv/config ./esbuild.js"
+    "production": "cross-env NODE_ENV=production node --require dotenv/config ./esbuild.js",
+    "prod": "cross-env NODE_ENV=production node --require dotenv/config ./esbuild.js"
   },
   "dependencies": {
     "@types/node": "^14.11.5",
+    "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
     "esbuild": "^0.7.13",
     "netlify-cms": "^2.10.61",
