@@ -10,7 +10,7 @@
   "scripts": {
     "cms-dev": "parcel src/index.html",
     "cms-build": "esbuild --bundle src/main.ts --minify --outfile=dist/main.js",
-    "cms-proxy": "netlify-cms-proxy-server",
+    "cms-proxy": "cross-env MODE=git netlify-cms-proxy-server",
     "cms": "run-p cms-dev cms-proxy",
     "production": "cross-env NODE_ENV=production node --require dotenv/config ./esbuild.js",
     "prod": "cross-env NODE_ENV=production node --require dotenv/config ./esbuild.js"
