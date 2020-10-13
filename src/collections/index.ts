@@ -174,18 +174,26 @@ let collections = [
                 "name": "params_toml",
                 "fields": [
                     {
-                        "label": "Brand Name",
-                        "name": "name",
-                        "widget": "string",
-                        "default": "Thriftshop",
-                        "hint": "Company Name with Slogan"
-                    },
-                    {
-                        "label": "Tag",
-                        "name": "tag",
-                        "widget": "string",
-                        "default": "SITE",
-                        "hint": "Site Brandname shown at smaller size"
+                        "label": "Brand Logo",
+                        "name": "logo",
+                        "widget": "object",
+                        "fields": [
+                            {
+                                "label": "Brand Logo",
+                                "name": "image",
+                                "widget": "image",
+                                "default": "/images/logo.svg",
+                                "required": false,
+                                "hint": "This Will Only Be Displayed at Mobile Devices"
+                            },
+                            {
+                                "label": "Image Height",
+                                "name": "height",
+                                "widget": "select",
+                                "options": SizeOptions,
+                                "default": 14
+                            },
+                        ]
                     },
                     {
                         "label": "Brand",
@@ -193,18 +201,60 @@ let collections = [
                         "widget": "object",
                         "fields": [
                             {
-                                "label": "Font",
+                                "label": "Enable",
+                                "name": "enable",
+                                "widget": "boolean",
+                                "default": "true",
+                                "hint": "Hide or Show Brand Name on Navbar"
+                            },
+                            {
+                                "label": "Fonts",
                                 "name": "font",
-                                "widget": "relation",
-                                "collection": "fonts",
-                                "file": "font_list",
-                                "display_fields": [
-                                    "fonts.*.name"
-                                ],
-                                "search_fields": [
-                                    "fonts.*.name"
-                                ],
-                                "value_field": "fonts.*.name"
+                                "widget": "object",
+                                "fields": [
+                                    {
+                                        "label": "Brand Name Font",
+                                        "name": "name",
+                                        "widget": "relation",
+                                        "collection": "fonts",
+                                        "file": "font_list",
+                                        "display_fields": [
+                                            "fonts.*.name"
+                                        ],
+                                        "search_fields": [
+                                            "fonts.*.name"
+                                        ],
+                                        "value_field": "fonts.*.name"
+                                    },
+                                    {
+                                        "label": "Brand Tag Font",
+                                        "name": "tag",
+                                        "widget": "relation",
+                                        "collection": "fonts",
+                                        "file": "font_list",
+                                        "display_fields": [
+                                            "fonts.*.name"
+                                        ],
+                                        "search_fields": [
+                                            "fonts.*.name"
+                                        ],
+                                        "value_field": "fonts.*.name"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "Brand Name",
+                                "name": "name",
+                                "widget": "string",
+                                "default": "Thriftshop",
+                                "required": false,
+                            },
+                            {
+                                "label": "Brand Tag",
+                                "name": "tag",
+                                "widget": "string",
+                                "default": "SITE",
+                                "required": false,
                             }
                         ]
                     },
@@ -261,13 +311,6 @@ let collections = [
                         ]
                     },
                     {
-                        "label": "logo",
-                        "name": "logo",
-                        "widget": "image",
-                        "default": "/images/logo.svg",
-                        "hint": "This Will Only Be Displayed at Mobile Devices"
-                    },
-                    {
                         "label": "Favicon",
                         "name": "favicon",
                         "widget": "image",
@@ -279,9 +322,10 @@ let collections = [
                         "name": "mainSections",
                         "collapsed": true,
                         "label_singular": "searchable",
-                        "widget": "list",
+                        "widget": "select",
                         "hint": "Pages From Section Listed Here is Searchable",
-                        "default": [
+                        "multiple": true,
+                        "options": [
                             "blog",
                             "products"
                         ]
