@@ -2353,14 +2353,166 @@ let collections = [
                                 "summary": "CTA/Simple Split With Image",
                                 "fields": [
                                     {
+                                        "label": "Background Color",
+                                        "name": "bg",
+                                        "widget": "object",
+                                        "fields": [
+                                            {
+                                                "label": "Color",
+                                                "name": "color",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "display_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "value_field": "colors.*.value"
+                                            },
+                                            {
+                                                "label": "Shade",
+                                                "name": "shade",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "required": false,
+                                                "default": "",
+                                                "hint": "themable colors have no shade e.g. primary, secondary , accent, etc. and neutral color such as black, white, and transparent.",
+                                                "display_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "value_field": "shades.*.value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "label": "Text Color",
+                                        "name": "text",
+                                        "widget": "object",
+                                        "fields": [
+                                            {
+                                                "label": "Color",
+                                                "name": "color",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "display_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "value_field": "colors.*.value"
+                                            },
+                                            {
+                                                "label": "Shade",
+                                                "name": "shade",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "required": false,
+                                                "default": "",
+                                                "hint": "themable colors have no shade e.g. primary, secondary , accent, etc. and neutral color such as black, white, and transparent.",
+                                                "display_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "value_field": "shades.*.value"
+                                            }
+                                        ]
+                                    },
+                                    {
                                         "label": "Header",
                                         "name": "header",
-                                        "widget": "string"
+                                        "widget": "object",
+                                        "fields": [
+                                            {
+                                                "label": "Title",
+                                                "name": "name",
+                                                "widget": "string"
+                                            },
+                                            {
+                                                "label": "Text Color",
+                                                "name": "color",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "display_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "value_field": "colors.*.value"
+                                            },
+                                            {
+                                                "label": "Text Shade",
+                                                "name": "shade",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "required": false,
+                                                "default": "",
+                                                "hint": "themable colors have no shade e.g. primary, secondary , accent, etc. and neutral color such as black, white, and transparent.",
+                                                "display_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "value_field": "shades.*.value"
+                                            }
+                                        ]
                                     },
                                     {
                                         "label": "Tag",
                                         "name": "tag",
-                                        "widget": "string"
+                                        "widget": "object",
+                                        "fields": [
+                                            {
+                                                "label": "Title",
+                                                "name": "name",
+                                                "widget": "string"
+                                            },
+                                            {
+                                                "label": "Text Color",
+                                                "name": "color",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "display_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "value_field": "colors.*.value"
+                                            },
+                                            {
+                                                "label": "Text Shade",
+                                                "name": "shade",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "required": false,
+                                                "default": "",
+                                                "hint": "themable colors have no shade e.g. primary, secondary , accent, etc. and neutral color such as black, white, and transparent.",
+                                                "display_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "value_field": "shades.*.value"
+                                            }
+                                        ]
                                     },
                                     {
                                         "label": "Description",
@@ -2381,6 +2533,13 @@ let collections = [
                                                 "label": "Image Alt",
                                                 "name": "alt",
                                                 "widget": "string"
+                                            },
+                                            {
+                                                "label": "Height",
+                                                "name": "height",
+                                                "widget": "select",
+                                                "options": SizeOptions,
+                                                "default": 24
                                             }
                                         ]
                                     },
@@ -2407,10 +2566,30 @@ let collections = [
                                             },
                                             {
                                                 "label": "Icon",
-                                                "name": "image",
-                                                "hint": "Upload svg as Icon",
-                                                "widget": "image"
-                                            }
+                                                "name": "icon",
+                                                "widget": "object",
+                                                "fields": [
+                                                    {
+                                                        "label": "Image",
+                                                        "name": "image",
+                                                        "widget": "image",
+                                                        "default": "images/tuple-logo.svg"
+                                                    },
+                                                    {
+                                                        "label": "Image Alt",
+                                                        "name": "alt",
+                                                        "default": "Action Button",
+                                                        "widget": "string"
+                                                    },
+                                                    {
+                                                        "label": "Image Height",
+                                                        "name": "height",
+                                                        "widget": "select",
+                                                        "options": SizeOptions,
+                                                        "default": 12
+                                                    }
+                                                ]
+                                            },
                                         ]
                                     }
                                 ]
@@ -2619,7 +2798,7 @@ let collections = [
                                             {
                                                 "label": "Company/Work",
                                                 "name": "company",
-                                                "widget": "string",
+                                                "widgetBackground": "string",
                                                 "default": "CEO/Founder"
                                             },
                                             {
@@ -2682,6 +2861,419 @@ let collections = [
                                                 "name": "image",
                                                 "widget": "image",
                                                 "default": "images/avatar.svg"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "Team Section",
+                                "name": "team_dark",
+                                "widget": "object",
+                                "summary": "Team Section: {{fields.title}}",
+                                "fields": [
+                                    {
+                                        "label": "Template",
+                                        "name": "template",
+                                        "widget": "hidden",
+                                        "default": "templates/teams/section.html"
+                                    },
+                                    {
+                                        "label": "Title",
+                                        "name": "title",
+                                        "widget": "string",
+                                        "default": "Meet Our Team"
+                                    },
+                                    {
+                                        "label": "Subtitle",
+                                        "name": "subtitle",
+                                        "widget": "string",
+                                        "default": "Ornare sagittis, suspendisse in hendrerit quis. Sed dui aliquet lectus sit pretium egestas vel mattis neque."
+                                    },
+                                    {
+                                        "label": "Background Color",
+                                        "name": "bg",
+                                        "widget": "object",
+                                        "fields": [
+                                            {
+                                                "label": "Color",
+                                                "name": "color",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "display_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "value_field": "colors.*.value"
+                                            },
+                                            {
+                                                "label": "Shade",
+                                                "name": "shade",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "required": false,
+                                                "default": "",
+                                                "hint": "themable colors have no shade e.g. primary, secondary , accent, etc. and neutral color such as black, white, and transparent.",
+                                                "display_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "value_field": "shades.*.value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "label": "Card Background Color",
+                                        "name": "card_bg",
+                                        "widget": "object",
+                                        "fields": [
+                                            {
+                                                "label": "Color",
+                                                "name": "color",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "display_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "value_field": "colors.*.value"
+                                            },
+                                            {
+                                                "label": "Shade",
+                                                "name": "shade",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "required": false,
+                                                "default": "",
+                                                "hint": "themable colors have no shade e.g. primary, secondary , accent, etc. and neutral color such as black, white, and transparent.",
+                                                "display_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "value_field": "shades.*.value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "label": "Name Text Color",
+                                        "name": "name_text",
+                                        "widget": "object",
+                                        "fields": [
+                                            {
+                                                "label": "Color",
+                                                "name": "color",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "display_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "value_field": "colors.*.value"
+                                            },
+                                            {
+                                                "label": "Shade",
+                                                "name": "shade",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "required": false,
+                                                "default": "",
+                                                "hint": "themable colors have no shade e.g. primary, secondary , accent, etc. and neutral color such as black, white, and transparent.",
+                                                "display_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "value_field": "shades.*.value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "label": "Title Text Color",
+                                        "name": "title_text",
+                                        "widget": "object",
+                                        "fields": [
+                                            {
+                                                "label": "Text Color",
+                                                "name": "color",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "display_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "value_field": "colors.*.value"
+                                            },
+                                            {
+                                                "label": "Text Shade",
+                                                "name": "shade",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "required": false,
+                                                "default": "",
+                                                "hint": "themable colors have no shade e.g. primary, secondary , accent, etc. and neutral color such as black, white, and transparent.",
+                                                "display_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "value_field": "shades.*.value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "label": "Role Text Color",
+                                        "name": "role_text",
+                                        "widget": "object",
+                                        "fields": [
+                                            {
+                                                "label": "Text Color",
+                                                "name": "color",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "display_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "colors.*.name"
+                                                ],
+                                                "value_field": "colors.*.value"
+                                            },
+                                            {
+                                                "label": "Text Shade",
+                                                "name": "shade",
+                                                "widget": "relation",
+                                                "collection": "colors",
+                                                "file": "color_list",
+                                                "required": false,
+                                                "default": "",
+                                                "hint": "themable colors have no shade e.g. primary, secondary , accent, etc. and neutral color such as black, white, and transparent.",
+                                                "display_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "search_fields": [
+                                                    "shades.*.name"
+                                                ],
+                                                "value_field": "shades.*.value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "label": "Team Members",
+                                        "name": "members",
+                                        "required": false,
+                                        "collapsed": true,
+                                        "label_singular": "Member",
+                                        "widget": "list",
+                                        "summary": "{{fields.name}}",
+                                        "fields": [
+                                            {
+                                                "label": "Full Name",
+                                                "name": "name",
+                                                "widget": "string",
+                                                "required": false,
+                                                "default": "Juan Dela Cruz"
+                                            },
+                                            {
+                                                "label": "Role",
+                                                "name": "role",
+                                                "widget": "object",
+                                                "fields": [
+                                                    {
+                                                        "label": "Name",
+                                                        "name": "name",
+                                                        "widget": "string"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "label": "Profile Picture",
+                                                "name": "image",
+                                                "widget": "object",
+                                                "fields": [
+                                                    {
+                                                        "label": "Image",
+                                                        "name": "url",
+                                                        "widget": "image"
+                                                    },
+                                                    {
+                                                        "label": "Alt",
+                                                        "name": "name",
+                                                        "widget": "string",
+                                                        "required": false,
+                                                        "default": "Team Member"
+                                                    },
+                                                ]
+                                            },
+                                            {
+                                                "label": "Social Networks",
+                                                "name": "links",
+                                                "widget": "list",
+                                                "required": false,
+                                                "collapsed": true,
+                                                "label_singular": "Social Network",
+                                                "types": [
+                                                    {
+                                                        "label": "Facebook",
+                                                        "name": "facebook",
+                                                        "widget": "object",
+                                                        "fields": [
+                                                            {
+                                                                "label": "Link",
+                                                                "name": "link",
+                                                                "widget": "string",
+                                                                "pattern": [
+                                                                    "(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
+                                                                    "ONLY VALID URL ALLOWED!"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "label": "Icon",
+                                                                "name": "icon",
+                                                                "widget": "image",
+                                                                "required": false,
+                                                                "default": "/images/facebook.svg"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "label": "Instagram",
+                                                        "name": "instagram",
+                                                        "widget": "object",
+                                                        "fields": [
+                                                            {
+                                                                "label": "Link",
+                                                                "name": "link",
+                                                                "widget": "string",
+                                                                "pattern": [
+                                                                    "(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
+                                                                    "ONLY VALID URL ALLOWED!"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "label": "Icon",
+                                                                "name": "icon",
+                                                                "widget": "image",
+                                                                "required": false,
+                                                                "default": "/images/instagram.svg"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "label": "Twitter",
+                                                        "name": "twitter",
+                                                        "widget": "object",
+                                                        "fields": [
+                                                            {
+                                                                "label": "Link",
+                                                                "name": "link",
+                                                                "widget": "string",
+                                                                "pattern": [
+                                                                    "(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
+                                                                    "ONLY VALID URL ALLOWED!"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "label": "Icon",
+                                                                "name": "icon",
+                                                                "widget": "image",
+                                                                "required": false,
+                                                                "default": "/images/twitter.svg"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "label": "Github",
+                                                        "name": "github",
+                                                        "widget": "object",
+                                                        "fields": [
+                                                            {
+                                                                "label": "Link",
+                                                                "name": "link",
+                                                                "widget": "string",
+                                                                "pattern": [
+                                                                    "(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
+                                                                    "ONLY VALID URL ALLOWED!"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "label": "Icon",
+                                                                "name": "icon",
+                                                                "widget": "image",
+                                                                "required": false,
+                                                                "default": "/images/github.svg"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "label": "Youtube",
+                                                        "name": "youtube",
+                                                        "widget": "object",
+                                                        "fields": [
+                                                            {
+                                                                "label": "Link",
+                                                                "name": "link",
+                                                                "widget": "string",
+                                                                "pattern": [
+                                                                    "(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
+                                                                    "ONLY VALID URL ALLOWED!"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "label": "Icon",
+                                                                "name": "icon",
+                                                                "widget": "image",
+                                                                "required": false,
+                                                                "default": "/images/youtube.svg"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "label": "LinkedIn",
+                                                        "name": "linkedin",
+                                                        "widget": "object",
+                                                        "fields": [
+                                                            {
+                                                                "label": "Link",
+                                                                "name": "link",
+                                                                "widget": "string",
+                                                                "pattern": [
+                                                                    "(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
+                                                                    "ONLY VALID URL ALLOWED!"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "label": "Icon",
+                                                                "name": "icon",
+                                                                "widget": "image",
+                                                                "required": false,
+                                                                "default": "/images/linkedin.svg"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
