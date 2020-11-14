@@ -339,7 +339,7 @@ let collections = [
                 ]
             },
             {
-                "file": "exampleSite/data/home/cart.yaml",
+                "file": "exampleSite/data/cart.yaml",
                 "label": "Cart Settings",
                 "name": "data_cart",
                 "fields": [
