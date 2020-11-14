@@ -1222,7 +1222,7 @@ let collections = [
         "hide": true,
         "files": [
             {
-                "file": "exampleSite/data/fonts/fonts.yaml",
+                "file": "exampleSite/data/fonts.yaml",
                 "label": "Font List",
                 "name": "font_list",
                 "fields": [
