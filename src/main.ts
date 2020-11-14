@@ -5,7 +5,7 @@ import {Backend} from './Structs/backend';
 
 let backend: Backend = {
     name: "git-gateway",
-    branch: "netlify-cms"
+    branch: "main"
 }
 
 let config: Config = {
